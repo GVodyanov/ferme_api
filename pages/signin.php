@@ -18,13 +18,11 @@
 
   //per prima controlliamo se l'email e' valido
   $sql = "SELECT user_id FROM utenti WHERE email = '$email' AND password = '$password'";
-  try {
-    $result = $conn->query($sql);
-    //prendiamo i dati ottenuti e gli mettiamo in $return
-    $result = mysqli_fetch_assoc($result);
-    $return = $result['user_id'];
-  } catch (Exception $e) {
-  }
+  $result = $conn->query($sql);
+  
+  //prendiamo i dati ottenuti e gli mettiamo in $return
+  $result = mysqli_fetch_assoc($result);
+  $return = $result['user_id'];
 
   //se $return non contiene nulla, le credenziali saranno state sbagliate
   if ($return == NULL) {
