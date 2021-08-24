@@ -5,6 +5,7 @@
 
   //ci prendiamo $conn per eseguire le connessioni
   require_once '../services/connect.php';
+  require_once "../services/sanitize.php";
 
   // Partenza e Verifica connessione
   if ($conn->connect_error) {
@@ -12,7 +13,7 @@
   }
 
   //prendiamo il forum selezionato dal cliente attraverso GET
-  $request = $_GET["selection"];
+  $request = san($conn, $_GET["selection"]);
 
   //facciamo il query al database
   //questo e' il commando che eseguiremo
@@ -51,4 +52,3 @@
 
   //adesso siamo pronti a mandare indietro i dati in formato JSON
   echo json_encode($return);
-?>

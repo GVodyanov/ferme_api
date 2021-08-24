@@ -19,7 +19,7 @@
   //per prima controlliamo se l'email e' valido
   $sql = "SELECT user_id FROM utenti WHERE email = '$email' AND password = '$password'";
   $result = $conn->query($sql);
-  
+
   //prendiamo i dati ottenuti e gli mettiamo in $return
   $result = mysqli_fetch_assoc($result);
   $return = $result['user_id'];
@@ -31,4 +31,3 @@
 
   //e mandiamo indietro l'id o l'errore in JSON
   echo json_encode($return);
-?>
