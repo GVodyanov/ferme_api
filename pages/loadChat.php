@@ -17,7 +17,7 @@
 
   //facciamo il query al database
   //questo e' il commando che eseguiremo
-  $sql = "SELECT id, messaggi, data FROM $request";
+  $sql = "SELECT id, messaggi, data, numeratore FROM $request";
 
   //qui eseguiamo il query per prendere i dati
   $result = $conn->query($sql);
@@ -34,9 +34,11 @@
       //qui abbiamo un loop che prendere ogni risultato e lo mettera' sotto al index giusto
       while($row = $result->fetch_assoc()) {
 
-        //qui mettiamo i dati in $return, e sono pronti alla spedizione indietro
+        //qui mettiamo i dati in $return
         $return[$i]['message'] = $row['messaggi'];
         $return[$i]['date'] = $row['data'];
+        $return[$i]['userId'] = $row['id'];
+        $return[$i]['messageId'] = $row['numeratore'];
 
         //un'altra piccola cosa che dobbiamo fare e' scoprire il username dal user_id
         $username = $row['id'];
@@ -44,7 +46,14 @@
         $fromObj = mysqli_fetch_assoc($query);
         $return[$i]['username'] = $fromObj['username'];
 
+        //per finire $return dobbiamo capire se un messaggio ha delle segnalazioni
+        $messageId = $row['numeratore'];
+        $sqlRep = "SELECT idSegnalatore FROM segnalazioni WHERE forum = '$request' AND messaggio = $messageId";
+        $reports = $conn->query($sqlRep);
+        $return[$i]['reports'] = $reports->num_rows;
+
         $i++;
+        if ($i > 39) break;
       }
   } else {
       echo "0 risultati";

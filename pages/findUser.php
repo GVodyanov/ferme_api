@@ -57,5 +57,5 @@
   }
 
   //e siamo pronti a mandare i dati, o la mancanza dei dati
-  echo json_encode($return);
+  if (isset($return)) echo json_encode($return);
   if ($return == NULL) echo json_encode('false');
