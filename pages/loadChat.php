@@ -40,11 +40,12 @@
         $return[$i]['userId'] = $row['id'];
         $return[$i]['messageId'] = $row['numeratore'];
 
-        //un'altra piccola cosa che dobbiamo fare e' scoprire il username dal user_id
-        $username = $row['id'];
-        $query = mysqli_query($conn, "SELECT username FROM utenti WHERE user_id = $username");
+        //un'altra piccola cosa che dobbiamo fare e' scoprire il username e foto profilo dal user_id
+        $id = $row['id'];
+        $query = mysqli_query($conn, "SELECT username, picture FROM utenti WHERE user_id = $id");
         $fromObj = mysqli_fetch_assoc($query);
         $return[$i]['username'] = $fromObj['username'];
+        $return[$i]['picture'] = $fromObj['picture'];
 
         //per finire $return dobbiamo capire se un messaggio ha delle segnalazioni
         $messageId = $row['numeratore'];
