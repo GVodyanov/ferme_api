@@ -23,7 +23,7 @@
   //prendiamo i dati ottenuti e gli mettiamo in $return
   $result = mysqli_fetch_assoc($result);
   $return = $result['user_id'];
-
+	
   //se $return non contiene nulla, le credenziali saranno state sbagliate
   if ($return == NULL) {
     $return = 'Email o Password inserito non è valido';
