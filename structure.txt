@@ -1,0 +1,282 @@
+-- MySQL dump 10.13  Distrib 8.0.25, for Linux (x86_64)
+--
+-- Host: localhost    Database: ferme
+-- ------------------------------------------------------
+-- Server version	8.0.25
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `altro`
+--
+
+DROP TABLE IF EXISTS `altro`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `altro` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `amici`
+--
+
+DROP TABLE IF EXISTS `amici`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `amici` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id1` smallint DEFAULT NULL,
+  `id2` smallint DEFAULT NULL,
+  `pending` smallint DEFAULT NULL,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `anime`
+--
+
+DROP TABLE IF EXISTS `anime`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `anime` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `arte`
+--
+
+DROP TABLE IF EXISTS `arte`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `arte` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `bloccati`
+--
+
+DROP TABLE IF EXISTS `bloccati`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `bloccati` (
+  `id1` smallint DEFAULT NULL,
+  `id2` smallint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `cinema`
+--
+
+DROP TABLE IF EXISTS `cinema`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cinema` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `compiti`
+--
+
+DROP TABLE IF EXISTS `compiti`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `compiti` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `cucina`
+--
+
+DROP TABLE IF EXISTS `cucina`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cucina` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `gaming`
+--
+
+DROP TABLE IF EXISTS `gaming`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `gaming` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `hobby`
+--
+
+DROP TABLE IF EXISTS `hobby`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `hobby` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `informatica`
+--
+
+DROP TABLE IF EXISTS `informatica`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `informatica` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `messaggi`
+--
+
+DROP TABLE IF EXISTS `messaggi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `messaggi` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `idMittente` smallint DEFAULT NULL,
+  `idDestinatario` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `musica`
+--
+
+DROP TABLE IF EXISTS `musica`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `musica` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `segnalazioni`
+--
+
+DROP TABLE IF EXISTS `segnalazioni`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `segnalazioni` (
+  `messaggio` int DEFAULT NULL,
+  `idSegnalatore` int DEFAULT NULL,
+  `forum` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `sport`
+--
+
+DROP TABLE IF EXISTS `sport`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sport` (
+  `numeratore` int NOT NULL AUTO_INCREMENT,
+  `id` smallint DEFAULT NULL,
+  `messaggi` varchar(1024) DEFAULT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`numeratore`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `utenti`
+--
+
+DROP TABLE IF EXISTS `utenti`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `utenti` (
+  `username` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `password` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `email` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `user_id` smallint NOT NULL AUTO_INCREMENT,
+  `picture` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT '1',
+  `description` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Utente di FerMe',
+  `ruolo` smallint DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-11-29 18:01:03
